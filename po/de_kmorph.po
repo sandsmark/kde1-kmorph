@@ -1,0 +1,244 @@
+#: kmorph.cpp:88
+msgid "Source-picture:"
+msgstr "Quellbild:"
+
+#: kmorph.cpp:96
+msgid "Destination-picture:"
+msgstr "Zielbild:"
+
+#: kmorph.cpp:105
+msgid "Resultnamemask:"
+msgstr "Res.namenmaske:"
+
+#: kmorph.cpp:115
+msgid "Startnumber:"
+msgstr "Startindex:"
+
+#: kmorph.cpp:125
+msgid "Endnumber:"
+msgstr "Endindex:"
+
+#: kmorph.cpp:141
+msgid "Warpstart:"
+msgstr "Warpstartindex:"
+
+#: kmorph.cpp:151
+msgid "Warpend:"
+msgstr "Warpendindex:"
+
+#: kmorph.cpp:160
+msgid "Warp only"
+msgstr "Nur Warp"
+
+#: kmorph.cpp:170
+msgid "Colormixstart:"
+msgstr "Überblendstart:"
+
+#: kmorph.cpp:180
+msgid "Colormixend:"
+msgstr "Überblendende:"
+
+#: kmorph.cpp:185
+msgid "Reload pictures"
+msgstr "Lade Bilder neu"
+
+#: kmorph.cpp:191
+msgid "No Project!"
+msgstr "Kein Projekt!"
+
+#: kmorph.cpp:204
+msgid "New"
+msgstr "Neu"
+
+#: kmorph.cpp:205
+msgid "Open"
+msgstr "Öffnen"
+
+#: kmorph.cpp:206
+msgid "Save"
+msgstr "Speichern"
+
+#: kmorph.cpp:207
+msgid "Save As"
+msgstr "Speichern als"
+
+#: kmorph.cpp:209
+msgid "Open sourcepicture"
+msgstr "Öffne Quellbild"
+
+#: kmorph.cpp:210
+msgid "Open dest.picture"
+msgstr "Öffne Zielbild"
+
+#: kmorph.cpp:212
+msgid "Exit"
+msgstr "Beenden"
+
+#: kmorph.cpp:216
+#: kmorph.cpp:240
+msgid "Editor"
+msgstr "Editor"
+
+#: kmorph.cpp:218
+#: kmorph.cpp:241
+msgid "Render"
+msgstr "Berechnen"
+
+#: kmorph.cpp:222
+#: kmorph.cpp:731
+msgid "Help"
+msgstr "Hilfe"
+
+#: kmorph.cpp:224
+#: kmorph.cpp:744
+msgid "About"
+msgstr "Info"
+
+#: kmorph.cpp:228
+msgid "&File"
+msgstr "&Datei"
+
+#: kmorph.cpp:229
+msgid "&Edit"
+msgstr "&Bearbeiten"
+
+#: kmorph.cpp:231
+msgid "&Help"
+msgstr "&Hilfe"
+
+#: kmorph.cpp:260
+msgid "Stop"
+msgstr "Anhalten"
+
+#: kmorph.cpp:294
+msgid "New Project!"
+msgstr "Neues Projekt!"
+
+#: kmorph.cpp:318
+msgid "Cannot open file!"
+msgstr "Kann Datei nicht öffnen!"
+
+#: kmorph.cpp:329
+msgid "Is not a kmorph-file!"
+msgstr "Keine Kmorphdatei!"
+
+#: kmorph.cpp:389
+msgid "Project loaded!"
+msgstr "Projekt geladen!"
+
+#: kmorph.cpp:405
+#: kmorph.cpp:442
+msgid "Cannot open project for writing!"
+msgstr "Kann Projekt nicht zum Schreiben öffnen!"
+
+#: kmorph.cpp:422
+#: kmorph.cpp:459
+msgid "Project saved!"
+msgstr "Projekt gespeichert!"
+
+#: kmorph.cpp:472
+msgid "Cannot open file:"
+msgstr "Kann Datei nicht öffnen:"
+
+#: kmorph.cpp:479
+msgid "File"
+msgstr "Datei"
+
+#: kmorph.cpp:479
+msgid "is no PPM format!"
+msgstr "ist kein PPM Format!"
+
+#: kmorph.cpp:493
+msgid "Out of memory!"
+msgstr "Zu wenig Speicher frei!"
+
+#: kmorph.cpp:511
+msgid "Cannot open file for writing:"
+msgstr "Kann Datei nicht zum Schreiben öffnen:"
+
+#: kmorph.cpp:600
+msgid "Cannot reload sourcepicture!"
+msgstr "Kann Quellbild nicht neu laden!"
+
+#: kmorph.cpp:613
+msgid "Cannot reload destinationpicture!"
+msgstr "Kann Zielbild nicht neu laden!"
+
+#: kmorph.cpp:621
+msgid "Pictures reloaded!"
+msgstr "Bilder neu geladen!"
+
+#: kmorph.cpp:659
+msgid "Rendering stopped!"
+msgstr "Berechnung gestopt!"
+
+#: kmorph.cpp:709
+msgid "Render frame"
+msgstr "Berechne Bild"
+
+#: kmorph.cpp:709
+msgid "line"
+msgstr "Zeile"
+
+#: kmorph.cpp:709
+msgid "of"
+msgstr "von"
+
+#: kmorph.cpp:716
+msgid "Render done!"
+msgstr "Berechnung fertig!"
+
+#: kmorph.cpp:730
+msgid "Help not available yet!"
+msgstr "Hilfe noch nicht möglich!"
+
+#: kmorph.cpp:731
+msgid "Sorry!"
+msgstr "Leider!"
+
+#: kmorph.cpp
+msgid "kmorph.html"
+msgstr "de_kmorph.html"
+
+#: kmorph.cpp:742
+msgid "Author:"
+msgstr "Autor:"
+
+#: kmorph.cpp:744
+msgid "Quit"
+msgstr "Fertig"
+
+#: kmorphwin.cpp: 31
+msgid "Close editor"
+msgstr "Editor schließen"
+
+#: kmorphwin.cpp: 39
+msgid "Select vector"
+msgstr "Vektor auswählen"
+
+#: kmorphwin.cpp: 39
+msgid "Select vector"
+msgstr "Vektor auswählen"
+
+#: kmorphwin.cpp: 46
+msgid "Add vector"
+msgstr "Vektor hinzufügen"
+
+#: kmorphwin.cpp: 69
+msgid "Select previous vector"
+msgstr "vorherigen Vektor auswählen"
+
+#: kmorphwin.cpp: 75
+msgid "Select next vector"
+msgstr "nächsten Vektor auswählen"
+
+#: kmorphwin.cpp: 82
+msgid "Delete vector"
+msgstr "Vektor löschen"
+
+#: kmorphwin.cpp: 103
+msgid "Gray / Color display"
+msgstr "Grau- / Farbanzeige"
+
+
+

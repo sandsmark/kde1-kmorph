@@ -1,0 +1,67 @@
+/****************************************************************************
+** KFileDialog meta object code from reading C++ file 'KFileDialog.h'
+**
+** Created: Sun May 25 01:19:00 1997
+**      by: The Qt Meta Object Compiler ($Revision: 2.14 $)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#define Q_MOC_OUTPUT_REVISION 2
+#elif Q_MOC_OUTPUT_REVISION != 2
+#error Moc format conflict - please regenerate all moc files
+#endif
+
+#include <qmetaobj.h>
+#include "KFileDialog.h"
+
+
+const char *KFileDialog::className() const
+{
+    return "KFileDialog";
+}
+
+QMetaObject *KFileDialog::metaObj = 0;
+
+void KFileDialog::initMetaObject()
+{
+    if ( metaObj )
+	return;
+    if ( strcmp(QDialog::className(), "QDialog") != 0 )
+	badSuperclassWarning("KFileDialog","QDialog");
+    if ( !QDialog::metaObject() )
+	QDialog::initMetaObject();
+    typedef void(KFileDialog::*m1_t0)();
+    typedef void(KFileDialog::*m1_t1)();
+    typedef void(KFileDialog::*m1_t2)();
+    typedef void(KFileDialog::*m1_t3)();
+    typedef void(KFileDialog::*m1_t4)(int);
+    typedef void(KFileDialog::*m1_t5)(int);
+    typedef void(KFileDialog::*m1_t6)(KDNDDropZone*);
+    m1_t0 v1_0 = &KFileDialog::scanDir;
+    m1_t1 v1_1 = &KFileDialog::gotoHome;
+    m1_t2 v1_2 = &KFileDialog::gotoParent;
+    m1_t3 v1_3 = &KFileDialog::gotoDir;
+    m1_t4 v1_4 = &KFileDialog::fileChosen;
+    m1_t5 v1_5 = &KFileDialog::fileSelected;
+    m1_t6 v1_6 = &KFileDialog::dropEvent;
+    QMetaData *slot_tbl = new QMetaData[7];
+    slot_tbl[0].name = "scanDir()";
+    slot_tbl[1].name = "gotoHome()";
+    slot_tbl[2].name = "gotoParent()";
+    slot_tbl[3].name = "gotoDir()";
+    slot_tbl[4].name = "fileChosen(int)";
+    slot_tbl[5].name = "fileSelected(int)";
+    slot_tbl[6].name = "dropEvent(KDNDDropZone*)";
+    slot_tbl[0].ptr = *((QMember*)&v1_0);
+    slot_tbl[1].ptr = *((QMember*)&v1_1);
+    slot_tbl[2].ptr = *((QMember*)&v1_2);
+    slot_tbl[3].ptr = *((QMember*)&v1_3);
+    slot_tbl[4].ptr = *((QMember*)&v1_4);
+    slot_tbl[5].ptr = *((QMember*)&v1_5);
+    slot_tbl[6].ptr = *((QMember*)&v1_6);
+    metaObj = new QMetaObject( "KFileDialog", "QDialog",
+	slot_tbl, 7,
+	0, 0 );
+}

@@ -1,0 +1,8 @@
+# Projectfile for kmorph V0.1.4
+kmorph
+data/face1.ppm
+data/face2.ppm
+data/result.%3i.ppm
+0 10 0 10
+0
+0

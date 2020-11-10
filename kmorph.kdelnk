@@ -1,0 +1,11 @@
+[KDE Desktop Entry]
+BinaryPattern=
+Protocols=
+MimeType=
+Comment=
+Exec=kmorph
+TerminalOptions=
+Icon=exec.xpm
+Path=
+Type=Application
+Terminal=0

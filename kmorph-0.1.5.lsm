@@ -1,0 +1,17 @@
+Begin
+Title:            kmorph
+Version:          0.1.5
+Entered-date:     09/15/97
+Description:      Morphprogram for the K Desktop Environment
+Description:      The code in not complete and prealpha,
+Description:      but right to test it.
+Description:      Comments to: wollgam@cww.de
+Keywords:         kde morph graphic X11 Qt
+Author:           Tobias Wollgam <wollgam@cww.de>
+Maintained-by:    Tobias Wollgam <wollgam@cww.de>
+Primary-site:     ftp://ftp.kde.org/pub/kde/apps/graphic/
+Alternate-site:   
+Original-site:    ftp://ftp.kde.org/pub/kde/apps/graphic/
+Platform:         unix (only tested on linux)
+Copying-policy:   GPL
+End

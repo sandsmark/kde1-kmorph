@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE></TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold (X11; I; Linux 2.0.30 i486) [Netscape]">
+</HEAD>
+<BODY>
+
+<CENTER><P><B><FONT SIZE=+2>KMorph - Hilfe</FONT><FONT SIZE=+4> </FONT></B><FONT SIZE=-1>(German,
+deutsch)</FONT></P></CENTER>
+
+<CENTER><P>
+<HR WIDTH="100%"></P></CENTER>
+
+<P>KMorph ist ein einfaches Programm um zwei Bilder (Quellbild und Zielbild)
+ineinander zu &uuml;berf&uuml;hren. Diese &Uuml;berf&uuml;hrung ist in
+beliebig vielen Schritten m&ouml;glich. Da jeder dieser Schritte als Resultatsbild
+gespeichert wird, ergeben die Resultatsbilder in der richtigen Reihenfolge
+eine Animation, bei der sich das Quellbild in das Zielbild verwandelt.</P>
+
+<P>KMorph ist noch im Alpha-Stadium (d.h. das die Software m&ouml;glicherweise
+noch Fehler enth&auml;lt, z.B. die zum Absturz des Programms f&uuml;hren
+k&ouml;nnen).</P>
+
+<P>F&uuml;r Verbesserungsvorschl&auml;ge oder Fehlermeldungen bitte eMail
+an <A HREF="mailto:wollgam@cww.de">wollgam@cww.de</A>. In der Zeile Betreff
+(subject) bitte kmorph angeben.</P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><B><FONT SIZE=+1>Inhalt:</FONT></B></P>
+
+<OL>
+<LI><A HREF="#morph">Wie funktioniert das Morphing</A></LI>
+
+<LI><A HREF="#project">Wie erstelle ich mein erstes Projekt</A></LI>
+
+<LI><A HREF="#handling">Wie bediene ich die Oberfl&auml;che von KMorph</A></LI>
+
+<LI><A HREF="#ppm">Das verwendete PPM-Format</A></LI>
+
+<LI><A HREF="#future">M&ouml;gliche Erg&auml;nzungen in Zukunft</A></LI>
+</OL>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A NAME="morph"></A><B><FONT SIZE=+2>Wie funktioniert das Morphing</FONT></B></P>
+
+<P>Der Grundgedanke der hinter dem Morphing steckt, ist der, da&szlig;
+die unterschiedlichen Motive zweier Bilder ineinander &uuml;bergehen, sich
+ineinander verwandeln (z.B. ein Hundekopf in den Kopf einer Katze). Doch
+wie errecht man dieses? W&uuml;rde man einfach die beiden Bilder &uuml;berblenden,
+so m&uuml;&szlig;ten bei beiden Motiven die Nasen, Ohren, Augen und Lippen
+an den gleichen Stellen liegen. Das ist jedoch mei&szlig;t nicht so. So
+kam man zu der &Uuml;berlegung diese markanten Punkte in den Bildern anzugleichen.
+Diese Angleichung , auch Warp genannt, wird dadurch erreicht, indem man
+die Bilder auf zwei digitale 'Gummimatten' projeziert und die markanten
+Punkte auf den Matten verschiebt, bis die Punkte auf beiden Matten &uuml;bereinstimmen.
+Zus&auml;tzlich wird dann noch aus den beiden verzerten Bildern durch den
+&Uuml;berblendeffekt ein Resultatsbild errechnet.</P>
+
+<P>Der hier benutzte Morphalgorithmus stammt aus der Computerzeitschrift
+c't vom Heise Verlag.</P>
+
+<P>Au&szlig;erdem werden zahlreiche Varianten zum Thema Morphing in der
+Fachliteratur vorgestellt.</P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A NAME="project"></A><B><FONT SIZE=+2>Wie erstelle ich mein erstes
+Projekt</FONT></B></P>
+
+<P>Ein Projekt besteht aus einem Quell- und einem Zielbild, Parametern
+zur Berechnung und Vektoren. Zun&auml;chst braucht man also die Bilder
+im <A HREF="#ppm">PPM-Format</A>, die m&ouml;glichst gleichgro&szlig; sein
+sollten. Diese werden geladen, bevor andere Dinge gemacht weren. </P>
+
+<P>Sind die bilder geladen, so kann man einen Editor zum edieren der Vektoren
+&ouml;ffnen. Die Vektoren geben die Verformungen der Bilder an.</P>
+
+<P>Zur Berechnung der Resultatsbilder braucht das Programm noch die Namenmaske,
+mit der berechnete Bilder sofort gespeichert werden. Diese Maske ist ein
+nochmaler Dateiname einschlie&szlig;lich Pfad und einem Formateintrag,
+der durch die Bildnummer ersetzt wird. Der Formateintrag sieht im einfachsten
+Fall so aus: %i. Damit die Dateinamen der Bilder bei der alphabetischen
+Sortierung in der Reichenfolge der Bilder sortiert werden. Kann der Formateintrag
+erweitert werden, %4i erzeugt dann vierstellige Zahlen, bei denen f&uuml;hrende
+Nullen durch Leerzeichen ersetzt werden. (Die genauen Formatm&ouml;glichkeiten
+entsprechen denen von printf(3), da der angegebene text als Formatstring
+dient).</P>
+
+<P>Der Startindex gibt an welchen Index das erste Bild heben soll.</P>
+
+<P>Der Endindex gibt an welchen Index das letzte Bild haben soll.</P>
+
+<P>Die anzahl der berechneten Bilder ergibt sich aus der Differenz von
+Endindex und Startindex.</P>
+
+<P>Der Warpstartindex gibt an bei welchem Bild mit der Verzerrung der Bilder
+begonnen werden soll.</P>
+
+<P>Der Warpendindex gibt an bei welchem Bild dieVerzerrung der Bilder beendet
+werden soll,</P>
+
+<P>Nur Warp gibt an, ob nur die Verzerrung berechnet werden soll, oder
+ob zus&auml;tzlich das &Uuml;berblenden der Farben erfolgt. W&auml;hlt
+man Nur Warp, so braucht man nur das Quellbild.</P>
+
+<P>Der &Uuml;berblendstart gibt an bei welchem Bild mit dem &Uuml;berblenden
+begonnen werden soll.</P>
+
+<P>Das &Uuml;berblendende gibt an bei welchem Bild das &Uuml;berblenden
+beendet werden soll.</P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A NAME="handling"></A><B><FONT SIZE=+2>Wie bediene ich die Oberfl&auml;che
+von KMorph</FONT></B></P>
+
+<P>Die Bedienung der Oberfl&auml;che von KMorph ist sehr einfach und entspricht
+der des gesamten KDE. Lediglich der Editor f&uuml;r die Vektoren wird deshalb
+an dieser Stelle beschrieben.</P>
+
+<P>Der Editor besteht aus drei Hauptkomponenten:</P>
+
+<OL>
+<LI>Die Werkzeugleiste</LI>
+
+<LI>Die Schiebeleiste</LI>
+
+<LI>Der Bildbereich und Vektoreditor</LI>
+</OL>
+
+<P>Die Werkzeugleiste l&auml;&szlig;t sich frei positionieren. Die einzelnen
+Werkzeuge werden durch Tooltips erkl&auml;rt.</P>
+
+<P>Die Schiebeleiste regelt das &Uuml;berblenden der beiden Bilder. Ist
+der Schieber ganz links wird das Quellbild zu 100% angezeigt, ist er ganz
+rechts wird das Zielbild zu 100% angezeigt. Genau in der Mitte werden beide
+Bilder zu je 50% angezeigt. Hier kann man beliebige Werte zum &Uuml;berblenden
+einstellen.</P>
+
+<P>Im Bildbereich k&ouml;nnen die Vektoren zur Bildverzerrung ediert werden.
+Beim dr&uuml;cken der linken Maustaste wird dabei ein Punkt f&uuml;r das
+Quellbild markiert (Quadrat), beim loslassen der Taste wird der zugeh&ouml;rige
+Punkt des Zielbildes markiert (Kreis). Diese Punkte werden sp&auml;ter
+beim Warp angeglichen. Ein rotgef&auml;rbter Vektor ist markiert und kann
+gel&ouml;scht werden.</P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A NAME="ppm"></A><B><FONT SIZE=+2>Das verwendete PPM-Format</FONT></B></P>
+
+<P>Das PPM-Format das KMorph benutzt;</P>
+
+<ADDRESS>P6</ADDRESS>
+
+<ADDRESS># Kommentar</ADDRESS>
+
+<ADDRESS>[w] [h]</ADDRESS>
+
+<ADDRESS>255</ADDRESS>
+
+<ADDRESS>[Bilddaten im Bin&auml;rformat]</ADDRESS>
+
+<P>[w] gibt die Bildbreite an</P>
+
+<P>[h] gibt die Bildh&ouml;he an</P>
+
+<P>[Bilddaten im Bin&auml;rformat] sind die Bilddaten RGB im Bin&auml;rformat</P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A NAME="future"></A><B><FONT SIZE=+2>M&ouml;gliche Erg&auml;nzungen
+in Zukunft</FONT></B></P>
+
+<UL>
+<LI>Variable Bildgr&ouml;&szlig;en</LI>
+
+<LI>Verschieben von Vektoren</LI>
+
+<LI>Andere Graphikformate</LI>
+
+<LI>Interpolation der Bildrahmen</LI>
+
+<LI>Beziervektoren</LI>
+</UL>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A HREF="mailto:wollgam@cww.de">wollgam@cww.de</A> </P>
+
+<P>Letzte &Auml;nderung am 8 September 1997</P>
+
+</BODY>
+</HTML>

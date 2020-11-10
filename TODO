@@ -1,0 +1,41 @@
+TODO:
+
+- Picture-size management
+- edit Vectors
+- configure
+- Configuration (save last Project, last wd, ...)
+- Sourcecode
+- Picture-frame management
+- Graphicformats
+- Bezier-'Vectors'
+- replace killTimers by killTimer?
+
+DONE:
+
+V0.1.5:
+
+- makefile: make moc-files
+- Bugfix
+- Help german
+- Tooltips german
+
+V0.1.4:
+
+- Multiple language support
+- README
+- TODO (this file)
+- status (disable Editor / Render if not both pictures loaded)
+- changed makefile (from mail)
+
+V0.1.3:
+
+- Editor: colormode
+- makefile: install uninstall 
+- dis-/enabling Widgets
+
+V0.1.2:
+
+- basic program
+- correcting morph-algorithm (c++)
+
+

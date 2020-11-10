@@ -1,0 +1,14 @@
+kmorph is a simple morph-utility for the KDE.
+
+To build the executable type 'make'.
+To install it type 'make install'.
+To uninstall it type 'make uninstall'.
+
+Bugs, please mail to: wollgam@cww.de
+
+Some samplefiles are in the folder 'data'.
+
+The pictures should have the same size, but
+is not requiered.
+
+
