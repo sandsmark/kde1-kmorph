@@ -2,7 +2,6 @@
 // kmorph - KDE
 //
 
-#include <glib.h>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
@@ -616,8 +615,8 @@ void	kmorph::reloadClicked()
 	if(picdata) free(picdata);
 
 	if(s && d) stbar->changeItem(stloc("Pictures reloaded!"),1);
-
-}	enableMenus();
+        enableMenus();
+}
 
 
 void	kmorph::winDestroyed()

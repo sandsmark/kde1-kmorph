@@ -7,7 +7,7 @@
  *
  */
 
-#include <iostream.h>
+#include <iostream>
 #include <stdlib.h>
 
 KFileDialog::KFileDialog (QWidget* _parent,const char* _name, bool _modal):QDialog( _parent, _name, _modal)
