@@ -8,6 +8,8 @@
  */
 
 #include <iostream>
+#include <kapp.h>
+#include <kiconloader.h>
 #include <stdlib.h>
 
 KFileDialog::KFileDialog (QWidget* _parent,const char* _name, bool _modal):QDialog( _parent, _name, _modal)
@@ -46,21 +48,19 @@ KFileDialog::KFileDialog (QWidget* _parent,const char* _name, bool _modal):QDial
   comboknob1->setSizeLimit( 30 );
   comboknob1->setMinimumSize(comboknob1->size());
   
-  QPixmap *parentpm = new QPixmap(kdehome+"/lib/pics/toolbar/up.xpm");
   parentknob1 = new QPushButton( this, "PushButton_4" );
   parentknob1->setGeometry( 95, 210, 30, 30 );
   parentknob1->setText( "P" );
-  parentknob1->setPixmap(*parentpm);
+  parentknob1->setPixmap(ICON("up.xpm"));
   parentknob1->setMaximumSize(parentknob1->size());
   parentknob1->setMinimumSize(parentknob1->size());
   connect(parentknob1,SIGNAL(clicked()),this,SLOT(gotoParent()));
   QToolTip :: add(parentknob1,"Parent");
 
-  QPixmap *homepm = new QPixmap(kdehome+"/lib/pics/toolbar/home.xpm");
   homeknob1 = new QPushButton( this, "PushButton_5" );
   homeknob1->setGeometry( 60, 210, 30, 30 );
   homeknob1->setText( "H" );
-  homeknob1->setPixmap(*homepm);
+  homeknob1->setPixmap(ICON("home.xpm"));
   homeknob1->setMaximumSize(homeknob1->size());
   homeknob1->setMinimumSize(homeknob1->size());
   connect(homeknob1,SIGNAL(clicked()),this,SLOT(gotoHome()));

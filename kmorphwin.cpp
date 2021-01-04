@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include <kapp.h>
+#include <kiconloader.h>
 
 #include "kmorphwin.h"
 #include "kmorphwin.moc"
@@ -38,23 +39,20 @@ void	kmorphwin::createWidgets()
 
 	tb = new KToolBar(this);
 
-	qp.load(pixdir + "exit.xpm");
-	tb->insertButton(qp,BT_CLOSE,
+	tb->insertButton(ICON("exit.xpm"),BT_CLOSE,
 		SIGNAL(clicked()),this,
 		SLOT(accept()),TRUE,
 		klocale->translate("Close editor"),-1);
 	tb->insertSeparator();
 
-	qp.load(pixdir + "select.xpm");
 	//qp.load("../icons/select.xpm");
-	tb->insertButton(qp,BT_MODESELECT,
+	tb->insertButton(ICON("select.xpm"),BT_MODESELECT,
 		SIGNAL(toggled(bool)),this,
 		SLOT(modeSelect(bool)),TRUE,
 		klocale->translate("Select vector"),-1);
 	tb->setToggle(BT_MODESELECT);
 
-	qp.load(pixdir + "line.xpm");
-	tb->insertButton(qp,BT_MODEADD,
+	tb->insertButton(ICON("line.xpm"),BT_MODEADD,
 		SIGNAL(toggled(bool)),this,
 		SLOT(modeAdd(bool)),TRUE,
 		klocale->translate("Add vector"),-1);
@@ -76,21 +74,18 @@ void	kmorphwin::createWidgets()
 	tb->setToggle(BT_MODEMOVEDEST);
 */
 
-	qp.load(pixdir + "back.xpm");
-	tb->insertButton(qp,BT_PREV,
+	tb->insertButton(ICON("back.xpm"),BT_PREV,
 		SIGNAL(clicked()),this,
 		SLOT(prevClicked()),TRUE,
 		klocale->translate("Select previous vector"),-1);
 
-	qp.load(pixdir + "forward.xpm");
-	tb->insertButton(qp,BT_NEXT,
+	tb->insertButton(ICON("forward.xpm"),BT_NEXT,
 		SIGNAL(clicked()),this,
 		SLOT(nextClicked()),TRUE,
 		klocale->translate("Select next vector"),-1);
 	tb->insertSeparator();
 
-	qp.load(pixdir + "delete.xpm");
-	tb->insertButton(qp,BT_DELETE,
+	tb->insertButton(ICON("delete.xpm"),BT_DELETE,
 		SIGNAL(clicked()),this,
 		SLOT(deleteClicked()),TRUE,
 		klocale->translate("Delete vector"),-1);
@@ -109,9 +104,8 @@ void	kmorphwin::createWidgets()
 
 */
 
-	qp.load(pixdir + "dispcolor.xpm");
 	//qp.load("../icons/dispcolor.xpm");
-	tb->insertButton(qp,BT_DISPLAYCOLOR,
+	tb->insertButton(ICON("dispcolor.xpm"),BT_DISPLAYCOLOR,
 		SIGNAL(toggled(bool)),this,
 		SLOT(modeDisplayColor(bool)),TRUE,
 		klocale->translate("Gray / Color display"),-1);

@@ -62,6 +62,7 @@ install(FILES
     icons/movedest.xpm
     icons/movesrc.xpm
     icons/select.xpm
+    icons/line.xpm
     DESTINATION ${KDE1_TOOLBARDIR}
 )
 
